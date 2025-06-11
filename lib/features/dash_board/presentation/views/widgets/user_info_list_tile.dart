@@ -10,20 +10,31 @@ class UserInfoListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Color(0xFFFAFAFA),
-      elevation: 0,
-      child: ListTile(
-        leading: SvgPicture.asset(userAvatar),
-        title: Text(
-          userName,
-          style: AppStyles.styleSemiBold16.copyWith(
-            color: const Color(0xFF064061),
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0, left: 10, right: 20),
+      child: Card(
+        color: Color(0xFFFAFAFA),
+        elevation: 0,
+        child: ListTile(
+          leading: SvgPicture.asset(userAvatar),
+          title: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userName,
+              style: AppStyles.styleSemiBold16.copyWith(
+                color: const Color(0xFF064061),
+              ),
+            ),
           ),
-        ),
-        subtitle: Text(
-          userEmail,
-          style: AppStyles.styleRegular12,
+          subtitle: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userEmail,
+              style: AppStyles.styleRegular12,
+            ),
+          ),
         ),
       ),
     );
