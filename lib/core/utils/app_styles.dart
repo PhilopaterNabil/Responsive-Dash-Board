@@ -16,14 +16,14 @@ abstract class AppStyles {
   );
 
   static const TextStyle styleRegular16 = TextStyle(
-    color: Color(0xFF064060),
+    color: Color(0xFF064061),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
 
   static const TextStyle styleMedium16 = TextStyle(
-    color: Color(0xFF064060),
+    color: Color(0xFF064061),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
@@ -37,14 +37,14 @@ abstract class AppStyles {
   );
 
   static const TextStyle styleSemiBold16 = TextStyle(
-    color: Color(0xFF064060),
+    color: Color(0xFF064061),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
 
   static const TextStyle styleSemiBold20 = TextStyle(
-    color: Color(0xFF064060),
+    color: Color(0xFF064061),
     fontSize: 20,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,

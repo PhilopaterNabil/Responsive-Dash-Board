@@ -11,7 +11,7 @@ class RangeOptions extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.white, width: 1),
+          side: BorderSide(color: Color(0xFFF1F1F1), width: 1),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -27,6 +27,7 @@ class RangeOptions extends StatelessWidget {
             angle: -3.14 / 2, // 90 degrees in radians (1 radian = 180 degrees)
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
+              size: 16,
               color: const Color(0xFF064061),
             ),
           ),
