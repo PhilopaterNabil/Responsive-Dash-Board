@@ -22,15 +22,15 @@ class ItemDetails extends StatelessWidget {
       title: FittedBox(
           fit: BoxFit.scaleDown,
           alignment: Alignment.centerLeft,
-          child: Text(itemDetailsModel.title, style: AppStyles.styleRegular16)),
+          child: Text(itemDetailsModel.title, style: AppStyles.styleRegular16(context))),
       trailing: Text(
         itemDetailsModel.value,
-        style: AppStyles.styleMedium16.copyWith(color: Color(0xFF208CC8)),
+        style: AppStyles.styleMedium16(context).copyWith(color: Color(0xFF208CC8)),
       ),
     );
   }
 
-  Widget _buildItemDetails() {
+  Widget _buildItemDetails(context) {
     return Padding(
       padding: const EdgeInsets.only(left: 16),
       child: FittedBox(
@@ -48,12 +48,12 @@ class ItemDetails extends StatelessWidget {
             const SizedBox(width: 8),
             Text(
               itemDetailsModel.title,
-              style: AppStyles.styleRegular16,
+              style: AppStyles.styleRegular16(context),
             ),
             const SizedBox(width: 8),
             Text(
               itemDetailsModel.value,
-              style: AppStyles.styleMedium16.copyWith(color: Color(0xFF208CC8)),
+              style: AppStyles.styleMedium16(context).copyWith(color: Color(0xFF208CC8)),
             ),
           ],
         ),

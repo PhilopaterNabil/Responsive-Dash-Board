@@ -21,7 +21,7 @@ class UserInfoListTile extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               userInfoModel.userName,
-              style: AppStyles.styleSemiBold16.copyWith(
+              style: AppStyles.styleSemiBold16(context).copyWith(
                 color: const Color(0xFF064061),
               ),
             ),
@@ -31,7 +31,7 @@ class UserInfoListTile extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               userInfoModel.userEmail,
-              style: AppStyles.styleRegular12,
+              style: AppStyles.styleRegular12(context),
             ),
           ),
         ),

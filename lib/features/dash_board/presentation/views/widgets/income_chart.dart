@@ -38,7 +38,7 @@ class _IncomeChartState extends State<IncomeChart> {
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
           value: 40,
           titleStyle:
-              AppStyles.styleMedium16.copyWith(color: activeIndex == 0 ? null : Colors.white),
+              AppStyles.styleMedium16(context).copyWith(color: activeIndex == 0 ? null : Colors.white),
           color: Color(0xFF208BC7),
           radius: activeIndex == 0 ? 60 : 50,
         ),
@@ -48,7 +48,7 @@ class _IncomeChartState extends State<IncomeChart> {
           titlePositionPercentageOffset: activeIndex == 1 ? 2.2 : null,
           value: 25,
           titleStyle:
-              AppStyles.styleMedium16.copyWith(color: activeIndex == 1 ? null : Colors.white),
+              AppStyles.styleMedium16(context).copyWith(color: activeIndex == 1 ? null : Colors.white),
           color: Color(0xFF4DB7F2),
           radius: activeIndex == 1 ? 60 : 50,
         ),
@@ -58,7 +58,7 @@ class _IncomeChartState extends State<IncomeChart> {
           titlePositionPercentageOffset: activeIndex == 2 ? 1.4 : null,
           value: 20,
           titleStyle:
-              AppStyles.styleMedium16.copyWith(color: activeIndex == 2 ? null : Colors.white),
+              AppStyles.styleMedium16(context).copyWith(color: activeIndex == 2 ? null : Colors.white),
           color: Color(0xFF064060),
           radius: activeIndex == 2 ? 60 : 50,
         ),
@@ -68,7 +68,7 @@ class _IncomeChartState extends State<IncomeChart> {
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
           value: 22,
           titleStyle:
-              AppStyles.styleMedium16.copyWith(color: activeIndex == 3 ? null : Colors.white),
+              AppStyles.styleMedium16(context).copyWith(color: activeIndex == 3 ? null : Colors.white),
           color: Color(0xFFE2DECD),
           radius: activeIndex == 3 ? 60 : 50,
         ),

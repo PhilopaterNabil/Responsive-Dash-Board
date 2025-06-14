@@ -19,7 +19,7 @@ class RangeOptions extends StatelessWidget {
         children: [
           Text(
             'Monthly',
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           SizedBox(width: 18),
           Transform.rotate(

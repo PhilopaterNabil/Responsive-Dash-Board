@@ -30,21 +30,21 @@ class AllExpensesItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             allExpensesItemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(
+            style: AppStyles.styleSemiBold16(context).copyWith(
               color: isSelected ? Colors.white : const Color(0xFF064061),
             ),
           ),
           SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(
+            style: AppStyles.styleRegular14(context).copyWith(
               color: isSelected ? Color(0xFFFAFAFA) : const Color(0xFFAAAAAA),
             ),
           ),
           const SizedBox(height: 16),
           Text(
             allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(
+            style: AppStyles.styleSemiBold24(context).copyWith(
               color: isSelected ? Colors.white : const Color(0xFF4EB7F2),
             ),
           ),
