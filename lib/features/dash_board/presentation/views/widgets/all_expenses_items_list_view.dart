@@ -6,6 +6,19 @@ import 'package:responsive_dash_board/features/dash_board/presentation/views/wid
 class AllExpensesItemsListView extends StatefulWidget {
   const AllExpensesItemsListView({super.key});
 
+  @override
+  State<AllExpensesItemsListView> createState() => _AllExpensesItemsListViewState();
+}
+
+class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
+  int selectedIndex = 0;
+  void onItemSelected(int index) {
+    if (selectedIndex == index) return;
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
   static const List<AllExpensesItemModel> allExpensesItems = [
     AllExpensesItemModel(
       iconPath: AppImages.imagesBalance,
@@ -28,36 +41,50 @@ class AllExpensesItemsListView extends StatefulWidget {
   ];
 
   @override
-  State<AllExpensesItemsListView> createState() => _AllExpensesItemsListViewState();
-}
-
-class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
-  int selectedIndex = 0;
-  void onItemSelected(int index) {
-    if (selectedIndex == index) return;
-    setState(() {
-      selectedIndex = index;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Row(
-      children: AllExpensesItemsListView.allExpensesItems.asMap().entries.map((e) {
-        int index = e.key;
-        AllExpensesItemModel item = e.value;
-
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
-            onTap: () => onItemSelected(index),
-            child: Padding(
-              padding: index == 1 ? const EdgeInsets.symmetric(horizontal: 12) : EdgeInsets.zero,
-              child:
-                  AllExpensesItem(allExpensesItemModel: item, isSelected: selectedIndex == index),
-            ),
+            onTap: () => onItemSelected(0),
+            child: AllExpensesItem(
+                allExpensesItemModel: allExpensesItems[0], isSelected: selectedIndex == 0),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => onItemSelected(1),
+            child: AllExpensesItem(
+                allExpensesItemModel: allExpensesItems[1], isSelected: selectedIndex == 1),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => onItemSelected(2),
+            child: AllExpensesItem(
+                allExpensesItemModel: allExpensesItems[2], isSelected: selectedIndex == 2),
+          ),
+        ),
+      ],
     );
+    // return Row(
+    //   children: AllExpensesItemsListView.allExpensesItems.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     AllExpensesItemModel item = e.value;
+
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () => onItemSelected(index),
+    //         child: Padding(
+    //           padding: index == 1 ? const EdgeInsets.symmetric(horizontal: 12) : EdgeInsets.zero,
+    //           child:
+    //               AllExpensesItem(allExpensesItemModel: item, isSelected: selectedIndex == index),
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
   }
 }

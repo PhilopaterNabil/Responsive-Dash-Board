@@ -20,10 +20,13 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child: Text(
-          title,
-          style: AppStyles.styleSemiBold18(context).copyWith(
-            color: textColor ?? Colors.white,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            title,
+            style: AppStyles.styleSemiBold18(context).copyWith(
+              color: textColor ?? Colors.white,
+            ),
           ),
         ),
       ),

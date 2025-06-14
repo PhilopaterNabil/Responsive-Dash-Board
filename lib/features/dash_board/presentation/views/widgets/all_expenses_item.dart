@@ -28,24 +28,36 @@ class AllExpensesItem extends StatelessWidget {
             isSelected: isSelected,
           ),
           const SizedBox(height: 34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: isSelected ? Colors.white : const Color(0xFF064061),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: isSelected ? Colors.white : const Color(0xFF064061),
+              ),
             ),
           ),
           SizedBox(height: 8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: isSelected ? Color(0xFFFAFAFA) : const Color(0xFFAAAAAA),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: isSelected ? Color(0xFFFAFAFA) : const Color(0xFFAAAAAA),
+              ),
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24(context).copyWith(
-              color: isSelected ? Colors.white : const Color(0xFF4EB7F2),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24(context).copyWith(
+                color: isSelected ? Colors.white : const Color(0xFF4EB7F2),
+              ),
             ),
           ),
         ],
