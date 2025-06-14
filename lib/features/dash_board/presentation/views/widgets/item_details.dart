@@ -9,6 +9,7 @@ class ItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return _buildItemDetails();
     return ListTile(
       leading: Container(
         width: 12,
@@ -18,10 +19,44 @@ class ItemDetails extends StatelessWidget {
           shape: BoxShape.circle,
         ),
       ),
-      title: Text(itemDetailsModel.title, style: AppStyles.styleRegular16),
+      title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(itemDetailsModel.title, style: AppStyles.styleRegular16)),
       trailing: Text(
         itemDetailsModel.value,
         style: AppStyles.styleMedium16.copyWith(color: Color(0xFF208CC8)),
+      ),
+    );
+  }
+
+  Widget _buildItemDetails() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Row(
+          children: [
+            Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                color: itemDetailsModel.color,
+                shape: BoxShape.circle,
+              ),
+            ),
+            const SizedBox(width: 8),
+            Text(
+              itemDetailsModel.title,
+              style: AppStyles.styleRegular16,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              itemDetailsModel.value,
+              style: AppStyles.styleMedium16.copyWith(color: Color(0xFF208CC8)),
+            ),
+          ],
+        ),
       ),
     );
   }
