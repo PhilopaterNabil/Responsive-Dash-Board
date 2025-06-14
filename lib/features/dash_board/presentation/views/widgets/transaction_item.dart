@@ -18,10 +18,17 @@ class TransactionItem extends StatelessWidget {
       ),
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-        title: Text(transactionModel.title, style: AppStyles.styleSemiBold16(context)),
-        subtitle: Text(
-          transactionModel.date,
-          style: AppStyles.styleRegular16(context).copyWith(color: Color(0xFFAAAAAA)),
+        title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(transactionModel.title, style: AppStyles.styleSemiBold16(context))),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            transactionModel.date,
+            style: AppStyles.styleRegular16(context).copyWith(color: Color(0xFFAAAAAA)),
+          ),
         ),
         trailing: Text(
           transactionModel.amount,

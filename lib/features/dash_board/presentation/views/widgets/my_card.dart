@@ -44,7 +44,7 @@ class MyCard extends StatelessWidget {
                     '0918 8124 0042 8129',
                     style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
                   ),
-                  SizedBox(height: 12),
+                  // SizedBox(height: 12),
                   Text(
                     '12/20 - 124',
                     style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
@@ -52,7 +52,7 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 27),
+            Flexible(child: SizedBox(height: 27)),
           ],
         ),
       ),
